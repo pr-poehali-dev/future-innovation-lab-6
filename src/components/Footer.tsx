@@ -1,18 +1,17 @@
 const footerLinks = {
   navigation: [
-    { label: "О нас", href: "#about" },
+    { label: "О проекте", href: "#about" },
     { label: "Команда", href: "#team" },
-    { label: "Портфель", href: "#portfolio" },
-    { label: "Карьера", href: "#careers" },
+    { label: "Характеристики", href: "#portfolio" },
+    { label: "Публикации", href: "#insights" },
   ],
   connect: [
-    { label: "LinkedIn", href: "#" },
     { label: "Контакты", href: "#contact" },
+    { label: "Фонд содействия инновациям", href: "#esg" },
   ],
   legal: [
-    { label: "Условия", href: "#terms" },
+    { label: "Условия использования", href: "#terms" },
     { label: "Конфиденциальность", href: "#privacy" },
-    { label: "Раскрытие информации", href: "#disclosures" },
   ],
 };
 
@@ -23,11 +22,10 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-serif text-xl font-medium">Northgate</span>
+              <span className="font-serif text-xl font-medium">УАС-ПТ</span>
             </div>
             <p className="text-sm text-primary-foreground/60 max-w-xs leading-relaxed">
-              Готовы обсудить ваш следующий этап развития? Мы всегда рады
-              познакомиться с выдающимися командами, формирующими будущее.
+              Беспилотная авиационная система пожаротушения. Студенческий стартап, поддержанный Фондом содействия инновациям.
             </p>
           </div>
 
@@ -88,10 +86,10 @@ export function Footer() {
 
         <div className="pt-10 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-[13px] text-primary-foreground/40">
-            {new Date().getFullYear()} Northgate Capital LP. Все права защищены.
+            {new Date().getFullYear()} УАС-ПТ. Студенческий стартап. Все права защищены.
           </p>
           <p className="text-[13px] text-primary-foreground/40 tracking-wide">
-            Москва • Санкт-Петербург • Лондон
+            Программа «Студенческий стартап» · Фонд содействия инновациям
           </p>
         </div>
       </div>

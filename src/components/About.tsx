@@ -1,20 +1,35 @@
-import { ArrowRight, Target, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
+import Icon from "@/components/ui/icon";
 
 const pillars = [
   {
     number: "01",
-    title: "Операционное совершенство",
+    title: "Система сброса рукава",
     description:
-      "Наш практический подход приносит ощутимые результаты: увеличение маржи, рост выручки и создание фундамента для устойчивого успеха вашего бизнеса.",
-    icon: Target,
+      "Двухрычажный механизм с сервоприводом, подключённый к полётному контроллеру SpeedyBee F405 V3. Сброс рукава по команде с пульта — безопасная посадка дрона после тушения.",
+    icon: "Settings2",
   },
   {
     number: "02",
-    title: "Стратегический капитал",
+    title: "3D-печать компонентов",
     description:
-      "Гибкие капитальные решения, разработанные под ваши цели. От акционерного капитала роста до поглощений — мы структурируем сделки, согласующие интересы и создающие стоимость.",
-    icon: TrendingUp,
+      "Детали изготовлены методом 3D-печати: PLA+ для корпуса, PETG для подрамника, TPU для гибкого пожарного ствола. Лёгкость и ремонтопригодность конструкции.",
+    icon: "Layers",
+  },
+  {
+    number: "03",
+    title: "Управление и прошивка",
+    description:
+      "Прошивка Betaflight, управляющий пин M5–M8, пины 5V и GND. Сброс по команде с пульта экономит заряд АКБ и обеспечивает безопасную посадку.",
+    icon: "Cpu",
+  },
+  {
+    number: "04",
+    title: "Модульный принцип",
+    description:
+      "Система спроектирована по модульному принципу: лёгкая замена и доработка отдельных узлов. Совместима с различными типами мультироторных платформ.",
+    icon: "PuzzleIcon",
   },
 ];
 
@@ -26,12 +41,13 @@ export function About() {
           <AnimateOnScroll>
             <div>
               <span className="text-[13px] font-medium text-accent tracking-widest uppercase mb-6 inline-flex items-center gap-3">
-                Почему мы <ArrowRight className="w-3 h-3" strokeWidth={1} />
+                О проекте <ArrowRight className="w-3 h-3" strokeWidth={1} />
               </span>
               <p className="text-2xl md:text-3xl leading-relaxed text-pretty font-light">
-                Мы не просто инвестируем — мы строим вместе с вами. Наша команда
-                привносит операционный опыт, отраслевую экспертизу и обширную сеть
-                деловых связей, чтобы помочь вам достичь значимых результатов.
+                Беспилотная авиационная система (БАС) с пожарным рукавом предназначена для тушения на начальном этапе, работы с крупногабаритной техникой и тушения верхних этажей зданий.
+              </p>
+              <p className="mt-6 text-muted-foreground text-lg leading-relaxed">
+                Экспериментальные исследования подтвердили эффективность системы. Адекватность математической модели подтверждена натурными испытаниями.
               </p>
             </div>
           </AnimateOnScroll>
@@ -39,14 +55,17 @@ export function About() {
           <AnimateOnScroll delay={150}>
             <div>
               <p className="text-[13px] font-medium text-muted-foreground tracking-widest uppercase mb-8">
-                Наши инвестиционные принципы
+                Ключевые технические решения
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 {pillars.map((pillar, index) => (
                   <AnimateOnScroll key={pillar.number} delay={300 + index * 150}>
                     <div className="p-8 border border-border/50 bg-card hover:border-accent/30 transition-colors duration-300 h-full">
-                      <pillar.icon
-                        className="w-6 h-6 text-accent mb-4"
+                      <Icon
+                        name={pillar.icon}
+                        size={24}
+                        className="text-accent mb-4"
+                        fallback="Settings"
                         strokeWidth={1}
                       />
                       <div className="text-5xl font-serif font-normal mb-6 text-accent/60">

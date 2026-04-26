@@ -3,25 +3,25 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 
 const articles = [
   {
-    slug: "southeast-asia-digital-economy",
-    category: "Обзор рынков",
-    title: "Цифровая экономика Юго-Восточной Азии: возможности на 27 трлн рублей",
-    date: "Декабрь 2025",
-    readTime: "8 мин",
+    slug: "aerodynamic-simulation",
+    category: "Моделирование",
+    title: "Аэродинамическое обтекание квадрокоптера: визуализация в ANSYS (t=0.63с … 3.00с)",
+    date: "2025",
+    readTime: "Результаты ANSYS",
   },
   {
-    slug: "latin-american-fintech",
-    category: "Инвестиционный прогноз",
-    title: "Почему мы оптимистичны в отношении латиноамериканского финтеха",
-    date: "Ноябрь 2025",
-    readTime: "6 мин",
+    slug: "fire-hose-release",
+    category: "Механика",
+    title: "Двухрычажный механизм сброса рукава: конструкция, сервопривод, интеграция с Betaflight",
+    date: "2025",
+    readTime: "Техническое описание",
   },
   {
-    slug: "measuring-impact-beyond-metrics",
-    category: "ESG-аналитика",
-    title: "Измерение воздействия: выход за рамки традиционных метрик",
-    date: "Октябрь 2025",
-    readTime: "5 мин",
+    slug: "field-tests",
+    category: "Испытания",
+    title: "Натурные испытания беспилотной системы пожаротушения: методика и результаты",
+    date: "2025",
+    readTime: "Отчёт об испытаниях",
   },
 ];
 
@@ -33,17 +33,17 @@ export function Insights() {
           <div className="flex items-end justify-between mb-16">
             <div>
               <span className="text-[13px] font-medium text-accent tracking-widest uppercase mb-6 block">
-                Аналитика
+                Публикации и материалы
               </span>
               <h2 className="font-serif text-4xl md:text-5xl font-normal">
-                Наш взгляд
+                Научные результаты
               </h2>
             </div>
             <a
               href="#insights"
               className="hidden md:flex items-center gap-2 text-sm font-medium text-accent hover:underline underline-offset-4"
             >
-              Смотреть все <ArrowRight className="w-4 h-4" strokeWidth={1} />
+              Все материалы <ArrowRight className="w-4 h-4" strokeWidth={1} />
             </a>
           </div>
         </AnimateOnScroll>
@@ -76,7 +76,7 @@ export function Insights() {
               href="#insights"
               className="flex items-center gap-2 text-sm font-medium text-accent hover:underline underline-offset-4"
             >
-              Смотреть всю аналитику <ArrowRight className="w-4 h-4" strokeWidth={1} />
+              Все материалы <ArrowRight className="w-4 h-4" strokeWidth={1} />
             </a>
           </div>
         </AnimateOnScroll>

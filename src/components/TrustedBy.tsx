@@ -1,12 +1,12 @@
 import { AnimateOnScroll } from "./AnimateOnScroll";
 
-const partnerTypes = [
-  "Суверенные фонды",
-  "Пенсионные фонды",
-  "Эндаументы вузов",
-  "Семейные офисы",
-  "Страховые компании",
-  "Фонды фондов",
+const technologies = [
+  "SpeedyBee F405 V3",
+  "Betaflight",
+  "ANSYS",
+  "3D-печать PLA+/PETG/TPU",
+  "Уравнения Ньютона–Эйлера",
+  "PD-контроллер",
 ];
 
 export function TrustedBy() {
@@ -15,15 +15,15 @@ export function TrustedBy() {
       <div className="mx-auto max-w-7xl">
         <AnimateOnScroll>
           <p className="text-[13px] font-medium text-muted-foreground tracking-widest uppercase text-center mb-12">
-            Наши партнеры по капиталу
+            Технологии и инструменты
           </p>
         </AnimateOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {partnerTypes.map((partner, index) => (
-            <AnimateOnScroll key={partner} delay={index * 100}>
+          {technologies.map((tech, index) => (
+            <AnimateOnScroll key={tech} delay={index * 100}>
               <div className="text-center">
                 <span className="text-sm font-medium text-muted-foreground">
-                  {partner}
+                  {tech}
                 </span>
               </div>
             </AnimateOnScroll>

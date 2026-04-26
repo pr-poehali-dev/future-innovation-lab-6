@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const LOGO_TEXT = "Northgate Capital";
+const LOGO_TEXT = "УАС-ПТ";
 
 const navLinks = [
-  { href: "#about", label: "О нас" },
-  { href: "#portfolio", label: "Портфель" },
+  { href: "#about", label: "О проекте" },
+  { href: "#portfolio", label: "Характеристики" },
   { href: "#team", label: "Команда" },
-  { href: "#insights", label: "Аналитика" },
+  { href: "#insights", label: "Публикации" },
 ];
 
 export function Header() {
@@ -71,7 +71,7 @@ export function Header() {
 
         <div className="hidden md:flex self-stretch min-w-[200px]">
           <Button className="group rounded-none w-full h-full text-[13px] font-medium tracking-wide uppercase justify-center hover:bg-foreground">
-            Связаться
+            Контакты
             <ArrowUpRight
               className="ml-2 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 ease-in-out"
               strokeWidth={1}
@@ -106,7 +106,7 @@ export function Header() {
               </a>
             ))}
             <Button className="group w-full rounded-none mt-6 py-5 text-[13px] font-medium tracking-wide uppercase hover:bg-foreground">
-              Связаться
+              Контакты
               <ArrowUpRight
                 className="ml-2 w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-700 ease-in-out"
                 strokeWidth={1}

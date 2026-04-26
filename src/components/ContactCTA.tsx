@@ -8,15 +8,13 @@ export function ContactCTA() {
       <div className="mx-auto max-w-4xl text-center">
         <AnimateOnScroll>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-8">
-            Давайте создадим что-то выдающееся вместе
+            Готовы к сотрудничеству и партнёрству
           </h2>
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={150}>
           <p className="text-lg text-primary-foreground/70 leading-relaxed mb-12 max-w-2xl mx-auto">
-            Будь вы основателем в поиске капитала для роста, институциональным
-            инвестором, изучающим развивающиеся рынки, или консультантом с
-            интересным предложением — мы хотим с вами связаться.
+            Если вы представляете пожарную службу, государственные структуры или инвестиционный фонд и заинтересованы в развитии проекта — мы открыты к диалогу.
           </p>
         </AnimateOnScroll>
 
@@ -26,14 +24,14 @@ export function ContactCTA() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 px-8"
             >
-              Начать разговор <ArrowRight className="ml-2 w-4 h-4" strokeWidth={1} />
+              Написать команде <ArrowRight className="ml-2 w-4 h-4" strokeWidth={1} />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 bg-transparent"
             >
-              Скачать материалы для инвесторов
+              Скачать отчёт по проекту
             </Button>
           </div>
         </AnimateOnScroll>

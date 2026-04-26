@@ -1,35 +1,33 @@
-import { ArrowUpRight, TrendingUp, Users, DollarSign } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
 import { CountUp } from "./CountUp";
+import Icon from "@/components/ui/icon";
 
 const caseStudies = [
   {
-    company: "МедТех Инновации",
-    sector: "Здравоохранение",
-    region: "Юго-Восточная Азия",
+    title: "Тушение начальной стадии пожара",
+    category: "Применение",
+    area: "Промышленные объекты",
     description:
-      "Региональная платформа медицинских технологий, предоставляющая цифровую диагностику и телемедицинские услуги в шести странах.",
-    investment: "Лид раунда B",
+      "Беспилотник с пожарным рукавом 25 мм доставляет воду под давлением 8 атм к очагу возгорания на ранней стадии. Позволяет ликвидировать пожар до прибытия пожарных расчётов.",
     metrics: [
-      { label: "Рост выручки", value: "4.5x", icon: TrendingUp },
-      { label: "Рост команды", value: "920+", icon: Users },
-      { label: "Мультипликатор выхода", value: "7.2x", icon: DollarSign },
+      { label: "Давление подачи воды", value: "8", unit: "атм", icon: "Gauge" },
+      { label: "Длина рукава", value: "20", unit: "м", icon: "Ruler" },
+      { label: "Ёмкость баллона", value: "50", unit: "л", icon: "FlaskConical" },
     ],
-    outcome: "Стратегическое поглощение завершено в 2024",
+    outcome: "Экспериментально подтверждена эффективность тушения",
   },
   {
-    company: "АгроКоннект",
-    sector: "АгроТех",
-    region: "Латинская Америка",
+    title: "Тушение верхних этажей и труднодоступных мест",
+    category: "Применение",
+    area: "Высотные здания",
     description:
-      "Платформа цифровизации цепочек поставок, связывающая мелких фермеров с международными товарными рынками.",
-    investment: "Капитал роста",
+      "Система обеспечивает доступ к верхним этажам зданий и труднодоступным местам без риска для людей. Вес системы с рукавом на высоте 10 м — 2,4 кг.",
     metrics: [
-      { label: "Фермеров обслужено", value: "145K+", icon: Users },
-      { label: "Рост GMV", value: "9.2x", icon: TrendingUp },
-      { label: "MOIC", value: "4.6x", icon: DollarSign },
+      { label: "Вес на высоте 10 м", value: "2.4", unit: "кг", icon: "Weight" },
+      { label: "Диаметр рукава", value: "25", unit: "мм", icon: "Droplets" },
+      { label: "Время стабилизации", value: "5", unit: "сек", icon: "Timer" },
     ],
-    outcome: "Раунд D при оценке 35 млрд рублей",
+    outcome: "Адекватность модели подтверждена натурными испытаниями",
   },
 ];
 
@@ -41,10 +39,10 @@ export function CaseStudies() {
           <div className="flex items-end justify-between mb-16">
             <div>
               <span className="text-[13px] font-medium text-accent tracking-widest uppercase mb-6 block">
-                Истории успеха
+                Области применения
               </span>
               <h2 className="font-serif text-4xl md:text-5xl font-normal">
-                Создание стоимости в действии
+                Результаты испытаний
               </h2>
             </div>
           </div>
@@ -52,19 +50,15 @@ export function CaseStudies() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           {caseStudies.map((study, index) => (
-            <AnimateOnScroll key={study.company} delay={index * 150}>
+            <AnimateOnScroll key={study.title} delay={index * 150}>
               <div className="border border-border bg-card p-8 lg:p-10 h-full flex flex-col">
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <span className="text-[11px] font-medium text-accent tracking-widest uppercase">
-                      {study.sector} — {study.region}
+                      {study.category} — {study.area}
                     </span>
-                    <h3 className="font-serif text-2xl mt-2">{study.company}</h3>
+                    <h3 className="font-serif text-2xl mt-2">{study.title}</h3>
                   </div>
-                  <ArrowUpRight
-                    className="w-5 h-5 text-muted-foreground"
-                    strokeWidth={1}
-                  />
                 </div>
 
                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -74,12 +68,16 @@ export function CaseStudies() {
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   {study.metrics.map((metric) => (
                     <div key={metric.label} className="text-center p-4 bg-secondary/50">
-                      <metric.icon
-                        className="w-4 h-4 text-accent mx-auto mb-2"
+                      <Icon
+                        name={metric.icon}
+                        size={16}
+                        className="text-accent mx-auto mb-2"
+                        fallback="CircleDot"
                         strokeWidth={1}
                       />
                       <div className="font-serif text-2xl text-accent mb-1">
                         <CountUp value={metric.value} />
+                        <span className="text-sm ml-1">{metric.unit}</span>
                       </div>
                       <div className="text-[11px] text-muted-foreground uppercase tracking-wide">
                         {metric.label}

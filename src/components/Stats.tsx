@@ -1,12 +1,12 @@
-import { DollarSign, Building2, Calendar, TrendingUp } from "lucide-react";
 import { AnimateOnScroll } from "./AnimateOnScroll";
 import { CountUp } from "./CountUp";
+import Icon from "@/components/ui/icon";
 
 const stats = [
-  { value: "240+", label: "Млрд рублей инвестировано", icon: DollarSign },
-  { value: "52", label: "Компании трансформированы", icon: Building2 },
-  { value: "21", label: "Год успешной работы", icon: Calendar },
-  { value: "3.5x", label: "Средняя доходность", icon: TrendingUp },
+  { value: "25", label: "Мм — диаметр рукава", icon: "Droplets" },
+  { value: "20", label: "Метров длина рукава", icon: "Ruler" },
+  { value: "8", label: "Атм давление в системе", icon: "Gauge" },
+  { value: "50", label: "Литров ёмкость баллона", icon: "FlaskConical" },
 ];
 
 export function Stats() {
@@ -19,8 +19,10 @@ export function Stats() {
               <div
                 className={`text-center ${index > 0 ? "md:border-l md:border-border/50" : ""}`}
               >
-                <stat.icon
-                  className="w-5 h-5 text-accent mx-auto mb-4"
+                <Icon
+                  name={stat.icon}
+                  size={20}
+                  className="text-accent mx-auto mb-4"
                   strokeWidth={1}
                 />
                 <div className="font-serif text-4xl md:text-5xl lg:text-6xl font-normal mb-3 tracking-tight">

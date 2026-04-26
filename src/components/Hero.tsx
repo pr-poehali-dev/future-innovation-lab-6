@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
-function PaintbrushUnderline() {
+function FlameUnderline() {
   return (
     <svg
       className="absolute -bottom-3 left-0 w-full h-6"
@@ -13,7 +13,7 @@ function PaintbrushUnderline() {
     >
       <path
         d="M2 12C20 6 40 10 60 8C80 6 100 12 120 10C140 8 160 5 180 7C200 9 220 14 240 11C260 8 280 6 298 10"
-        stroke="#2563eb"
+        stroke="#f97316"
         strokeWidth="8"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -54,23 +54,31 @@ export function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/tradecraft-fm-emerging-market-ar-169-stylize-200-v-7-4320fa46-3253-4d51-a195-020395b794bd-1.png"
-          alt="Силуэт быка на фоне городского горизонта"
+          alt="Беспилотная система пожаротушения"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[#0a1628]/70" />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
       </div>
 
       <div className="relative mx-auto max-w-5xl text-center py-32">
-        <h1
-          className={`font-serif text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-balance mb-8 leading-[1.1] text-white transition-all duration-700 ease-out ${
+        <div
+          className={`inline-flex items-center gap-2 text-[12px] font-medium tracking-widest uppercase text-accent/80 mb-8 transition-all duration-700 ease-out ${
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          Стратегические инвестиции для
+          Студенческий стартап · Фонд содействия инновациям
+        </div>
+
+        <h1
+          className={`font-serif text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight text-balance mb-8 leading-[1.1] text-white transition-all duration-700 ease-out delay-100 ${
+            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          Беспилотная система
           <br />
           <span className="relative inline-block italic">
-            устойчивого роста
-            <PaintbrushUnderline />
+            пожаротушения
+            <FlameUnderline />
           </span>
         </h1>
 
@@ -79,9 +87,8 @@ export function Hero() {
             mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          Мы сотрудничаем с амбициозными основателями и командами руководителей,
-          чтобы ускорить рост, преодолеть трудности и создать компании-лидеры
-          рынка. Более 240 млрд рублей инвестировано в 52 портфельные компании.
+          Тушение пожаров на начальном этапе, в труднодоступных местах и на верхних этажах зданий.
+          Модульный сбросной механизм, пожарный рукав 25 мм, давление 8 атм.
         </p>
 
         <div
@@ -91,9 +98,9 @@ export function Hero() {
         >
           <Button
             size="lg"
-            className="rounded-none px-10 min-h-[56px] text-[13px] font-medium tracking-wide uppercase gap-3 bg-white text-[#0a1628] hover:bg-primary hover:text-white transition-colors duration-300"
+            className="rounded-none px-10 min-h-[56px] text-[13px] font-medium tracking-wide uppercase gap-3 bg-white text-[#0a1628] hover:bg-accent hover:text-white transition-colors duration-300"
           >
-            Стать партнером
+            Технические характеристики
             <ArrowRight className="w-4 h-4" />
           </Button>
           <Button
@@ -101,7 +108,7 @@ export function Hero() {
             size="lg"
             className="rounded-none px-10 min-h-[56px] text-[13px] font-medium tracking-wide uppercase bg-transparent border-white/30 text-white hover:bg-white hover:text-[#0a1628]"
           >
-            Наши результаты
+            Результаты испытаний
           </Button>
         </div>
       </div>
